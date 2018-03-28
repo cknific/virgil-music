@@ -1,33 +1,50 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Link from 'gatsby-link'
+import {
+  Collapse,
+  Nav,
+  NavItem,
+  NavLink,
+  Navbar,
+  NavbarBrand,
+  NavbarToggler,
+} from 'reactstrap'
 
-const Header = () => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          Gatsby
-        </Link>
-      </h1>
-    </div>
-  </div>
-)
+class Header extends Component {
+  state = {
+    isOpen: false,
+  }
+
+  handleToggle = () => {
+    // eslint-disable-next-line react/no-set-state
+    this.setState(prevState => ({ isOpen: !prevState.isOpen }))
+  }
+
+  render() {
+    const { isOpen } = this.state
+
+    return (
+      <Navbar color="dark" expand="sm" dark>
+        <NavbarBrand href="/">
+          Virgil Music
+        </NavbarBrand>
+        <NavbarToggler onClick={this.handleToggle} />
+        <Collapse isOpen={isOpen} navbar>
+          <Nav navbar>
+            <NavItem>
+              <NavLink>A</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink>B</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink>C</NavLink>
+            </NavItem>
+          </Nav>
+        </Collapse>
+      </Navbar>
+    )
+  }
+}
 
 export default Header
