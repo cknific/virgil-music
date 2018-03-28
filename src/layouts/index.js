@@ -5,31 +5,38 @@ import Helmet from 'react-helmet'
 import Header from '../components/Header'
 import './index.scss'
 
-const TemplateWrapper = ({ children }) => (
+const IndexLayout = ({ children, data }) => (
   <div>
     <Helmet
-      title="Gatsby Default Starter"
-      meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
-      ]}
+      meta={data.site.siteMetadata.metaTags}
+      title={data.site.siteMetadata.title}
     />
     <Header />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
+    <div>
       {children()}
     </div>
   </div>
 )
 
-TemplateWrapper.propTypes = {
-  children: PropTypes.func,
+IndexLayout.propTypes = {
+  children: PropTypes.func.isRequired,
+  data: PropTypes.shape({
+    site: PropTypes.object.isRequired,
+  }).isRequired,
 }
 
-export default TemplateWrapper
+export default IndexLayout
+
+export const query = graphql`
+  query IndexLayoutQuery {
+    site {
+      siteMetadata {
+        metaTags {
+          name
+          content
+        }
+        title
+      }
+    }
+  }
+`
