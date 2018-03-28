@@ -1,6 +1,9 @@
+const metaTags = require('./src/data/website/meta-tags')
+
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Virgil Music',
+    metaTags: metaTags,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
