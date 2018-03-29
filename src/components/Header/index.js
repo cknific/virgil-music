@@ -9,6 +9,13 @@ import {
   NavbarBrand,
   NavbarToggler,
 } from 'reactstrap'
+import styled from 'styled-components'
+
+const StyledNavbar = styled(Navbar)`
+  &&& {
+    background-color: #222;
+  }
+`
 
 class Header extends Component {
   state = {
@@ -24,25 +31,25 @@ class Header extends Component {
     const { isOpen } = this.state
 
     return (
-      <Navbar color="dark" expand="sm" dark>
+      <StyledNavbar expand="sm" dark>
         <NavbarBrand href="/">
-          Virgil Music
+          VIRGIL
         </NavbarBrand>
         <NavbarToggler onClick={this.handleToggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav navbar>
             <NavItem>
-              <NavLink>A</NavLink>
+              <NavLink>The Band</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink>B</NavLink>
+              <NavLink>Listen</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink>C</NavLink>
+              <NavLink>Pre-order</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
-      </Navbar>
+      </StyledNavbar>
     )
   }
 }
