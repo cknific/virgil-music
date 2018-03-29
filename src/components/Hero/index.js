@@ -1,28 +1,28 @@
 import React from 'react'
 import { Container } from 'reactstrap'
 import styled from 'styled-components'
+import heroBackground from './images/album-art-no_text.jpg'
+import virgilLogo from './images/virgil-logo.png'
 
-const HeroContainer = styled.div`
-  background-image: url("http://via.placeholder.com/1250x550/111/333");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #111;
-  padding: 4rem 0;
+const StyledImg = styled.img`
+  align-self: center;
+  max-width: 50rem;
+  width: 100%;
 `
 
-const HeroHeading = styled.h1`
-  color: #fff;
-  margin-bottom: 0;
-  max-width: 40rem;
-  padding: 5rem 0;
+const HeroContainer = styled.div`
+  background-color: #111;
+  background-image: url("${heroBackground}");
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 17rem 0;
 `
 
 const Hero = () => (
   <HeroContainer>
-    <Container>
-      <HeroHeading>
-        Virgil | The Pacer
-      </HeroHeading>
+    <Container className="d-flex justify-content-center">
+      <StyledImg alt="virgil logo" src={virgilLogo} />
     </Container>
   </HeroContainer>
 )
