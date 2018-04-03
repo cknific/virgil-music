@@ -28,6 +28,7 @@ const BandName = styled.div`
 
 const SectionHeading = styled.h2`
   color: #fff;
+  font-family: "PT Sans Narrow", sans-serif;
   margin-bottom: 0;
   text-transform: uppercase;
 `
@@ -43,7 +44,7 @@ const StyledLink = styled(Link)`
 
 
 const PreOrder = () => (
-  <SectionContainer>
+  <SectionContainer id="pre-order">
     <Container>
       <SectionHeading>
         Pre-order 'The Pacer' at
