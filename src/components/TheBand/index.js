@@ -19,8 +19,13 @@ const PerformerCredit = styled.div`
   font-style: italic;
 `
 
+const PerformerRole = styled.h4`
+  font-family: "PT Sans Narrow", sans-serif;
+  text-transform: uppercase;
+`
+
 const SectionContainer = styled.div`
-  background-color: #222;
+  background-color: #4e1110;
   background-image: url("${heroBackground}");
   background-position-y: bottom;
   background-repeat: no-repeat;
@@ -32,6 +37,8 @@ const SectionContainer = styled.div`
 
 const SectionHeading = styled.h1`
   color: #fff;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 3rem;
   margin-bottom: 1rem;
   text-transform: uppercase;
 `
@@ -41,7 +48,7 @@ const StyledCol = styled(Col)`
 `
 
 const TheBand = () => (
-  <SectionContainer>
+  <SectionContainer id="band">
     <Container>
       <SectionHeading>
         The Band
@@ -54,17 +61,17 @@ const TheBand = () => (
       </Row>
       <CenteredRow>
         <StyledCol lg="4" md="6">
-          <div>Drums</div>
+          <PerformerRole>Drums</PerformerRole>
           <PerformerName>Navene Koperweis</PerformerName>
           <PerformerCredit>Animals As Leaders, Entheos</PerformerCredit>
         </StyledCol>
         <StyledCol lg="4" md="6">
-          <div>Bass</div>
+          <PerformerRole>Bass</PerformerRole>
           <PerformerName>Brandon Giffin</PerformerName>
           <PerformerCredit>The Faceless, Cynic</PerformerCredit>
         </StyledCol>
         <StyledCol lg="4" md="6">
-          <div>Lead Guitar</div>
+          <PerformerRole>Lead Guitar</PerformerRole>
           <PerformerName>Justin McKinney</PerformerName>
           <PerformerCredit>The Faceless, The Zenith Passage</PerformerCredit>
         </StyledCol>

@@ -3,7 +3,7 @@ import { Container } from 'reactstrap'
 import styled from 'styled-components'
 
 const SectionContainer = styled.div`
-  background-color: #333;
+  background-color: #434e50;
   width: 100%;
   position: relative;
   padding: 56% 0 0;
@@ -19,7 +19,7 @@ const StyledIframe = styled.iframe`
 `
 
 const Listen = () => (
-  <SectionContainer>
+  <SectionContainer id="listen">
     <StyledIframe
       src="https://www.youtube.com/embed/PBhvj8ad6Rw?rel=0"
       frameborder="0"
