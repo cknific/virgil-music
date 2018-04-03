@@ -6,6 +6,7 @@ import virgilLogo from './images/virgil-logo.png'
 
 const StyledImg = styled.img`
   align-self: center;
+  display: block;
   max-width: 50rem;
   width: 100%;
 `
@@ -19,11 +20,17 @@ const HeroContainer = styled.div`
   padding: 17rem 0;
 `
 
+const StyledContainer = styled('Container')`
+  &&& {
+    flex-direction: column;
+  }
+`
+
 const Hero = () => (
   <HeroContainer>
-    <Container className="d-flex justify-content-center">
+    <StyledContainer className="d-flex justify-content-center">
       <StyledImg alt="virgil logo" src={virgilLogo} />
-    </Container>
+    </StyledContainer>
   </HeroContainer>
 )
 
