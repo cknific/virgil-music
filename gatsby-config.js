@@ -12,7 +12,8 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `PT Sans Narrow`,
+          'PT Sans Narrow',
+          'Roboto Slab\:300',
         ],
       },
     },

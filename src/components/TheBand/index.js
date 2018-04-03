@@ -7,8 +7,13 @@ import heroBackground from './images/noise-and-hand-red.png'
 const CenteredRow = styled(Row)`
   &&& {
     justify-content: center;
-    margin-top: 3rem;
+    margin-top: 4rem;
   }
+`
+
+const CompositionCredit = styled.h4`
+  font-weight: 300;
+  font-size: 1.4rem;
 `
 
 const PerformerName = styled.h3`
@@ -39,7 +44,7 @@ const SectionHeading = styled.h1`
   color: #fff;
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   text-transform: uppercase;
 `
 
@@ -53,12 +58,9 @@ const TheBand = () => (
       <SectionHeading>
         The Band
       </SectionHeading>
-      <h4>Composition and Guitars by Chris Knific</h4>
-      <Row>
-        <Col>
-
-        </Col>
-      </Row>
+      <CompositionCredit>
+        Composition and Guitars by Chris Knific
+      </CompositionCredit>
       <CenteredRow>
         <StyledCol lg="4" md="6">
           <PerformerRole>Drums</PerformerRole>
