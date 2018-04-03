@@ -17,6 +17,7 @@ const HeroContainer = styled.div`
   background-position-y: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-top: -4rem;
   padding: 17rem 0;
 `
 
