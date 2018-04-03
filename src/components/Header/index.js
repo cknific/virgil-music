@@ -11,9 +11,17 @@ import {
 } from 'reactstrap'
 import styled from 'styled-components'
 
-const StyledNavbar = styled(Navbar)`
+const StyledNavbar = styled(Navbar).attrs({
+  dark: true,
+  expand: 'sm',
+  fixed: 'top',
+  sticky: 'top',
+})
+`
   &&& {
-    background-color: #222;
+    background-color: #111111e8;
+    font-family: "PT Sans Narrow", sans-serif;
+    position: sticky;
   }
 `
 
@@ -31,7 +39,7 @@ class Header extends Component {
     const { isOpen } = this.state
 
     return (
-      <StyledNavbar expand="sm" dark>
+      <StyledNavbar>
         <NavbarBrand href="/">
           VIRGIL
         </NavbarBrand>
@@ -39,13 +47,13 @@ class Header extends Component {
         <Collapse isOpen={isOpen} navbar>
           <Nav navbar>
             <NavItem>
-              <NavLink>The Band</NavLink>
+              <NavLink href="#band">The Band</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink>Listen</NavLink>
+              <NavLink href="#listen">Listen</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink>Pre-order</NavLink>
+              <NavLink href="#pre-order">Pre-order</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
