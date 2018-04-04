@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'reactstrap'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 import heroBackground from './images/album-art-green_wave.jpg'
-import virgilLogo from './images/virgil-logo.png'
+import virgilLogo from '../../components/Hero/images/virgil-logo.png'
 
 const SectionContainer = styled.div`
   background-color: #052f2d;
@@ -30,7 +30,6 @@ const SectionHeading = styled.h2`
   color: #fff;
   font-family: "PT Sans Narrow", sans-serif;
   margin-bottom: 0;
-  text-transform: uppercase;
 `
 
 const StyledLink = styled(Link)`
@@ -42,12 +41,11 @@ const StyledLink = styled(Link)`
   }
 `
 
-
 const PreOrder = () => (
   <SectionContainer id="pre-order">
     <Container>
       <SectionHeading>
-        Pre-order 'The Pacer' at
+        Pre-order "THE PACER" at the
       </SectionHeading>
       <BandName>
         <StyledImg alt="virgil logo" src={virgilLogo} />
