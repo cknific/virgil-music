@@ -47,7 +47,7 @@ class Header extends Component {
         <Collapse isOpen={isOpen} navbar>
           <Nav navbar>
             <NavItem>
-              <NavLink href="#band">The Band</NavLink>
+              <NavLink href="#bio">Bio</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="#listen">Listen</NavLink>
