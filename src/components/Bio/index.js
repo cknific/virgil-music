@@ -4,6 +4,13 @@ import styled from 'styled-components'
 
 import heroBackground from './images/noise-and-hand-red.png'
 
+const BioContainer = styled.div`
+  margin-top: 4rem;
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+`
+
 const CenteredRow = styled(Row)`
   &&& {
     justify-content: center;
@@ -52,11 +59,11 @@ const StyledCol = styled(Col)`
   margin-bottom: 2rem;
 `
 
-const TheBand = () => (
-  <SectionContainer id="band">
+const Bio = () => (
+  <SectionContainer id="bio">
     <Container>
       <SectionHeading>
-        The Band
+        Virgil
       </SectionHeading>
       <CompositionCredit>
         Composition and Guitars by Chris Knific
@@ -81,11 +88,15 @@ const TheBand = () => (
       <Row style={{ padding: '2rem 0 0' }}>
         <Col>
           <h4>Mixed by Simon Grove</h4>
-          <PerformerCredit>Plini, Intervals, Instrumental Adj</PerformerCredit>
+          <PerformerCredit>Plini, Intervals, Instrumental (Adj.)</PerformerCredit>
         </Col>
       </Row>
+      <BioContainer>
+        <h4>Bio</h4>
+        <p>Virgil is an instrumental progressive rock outfit based out of Los Angeles, CA. "The Pacer" is the band's debut EP and features Brandon Giffin on bass, Justin McKinney on lead guitar, and Navene Koperweis on drums. Piloting the group is Chris Knific, who composes and produces all of the music. Knific draws on influences such as Exivious, Chimpspanner, Devin Townsend, The Contortionist, and Yes, resulting in a mixture of fusion jazz, prog rock, and metal.</p>
+      </BioContainer>
     </Container>
   </SectionContainer>
 )
 
-export default TheBand
+export default Bio
