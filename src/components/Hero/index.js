@@ -5,31 +5,34 @@ import heroBackground from './images/album-art-no_text.jpg'
 import virgilLogo from './images/virgil-logo.png'
 
 const StyledImg = styled.img`
-  align-self: center;
-  display: block;
   max-width: 50rem;
-  width: 100%;
+  width: 95%;
 `
 
 const HeroContainer = styled.div`
+  align-items: center;
   background-color: #111;
   background-image: url("${heroBackground}");
   background-position-y: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  height: 80vh;
+  justify-content: center;
   margin-top: -4rem;
-  padding: 17rem 0;
 `
 
 const StyledContainer = styled('Container')`
   &&& {
-    flex-direction: column;
+    align-items: start;
+    display: flex;
+    justify-content: center;
   }
 `
 
 const Hero = () => (
   <HeroContainer>
-    <StyledContainer className="d-flex justify-content-center">
+    <StyledContainer>
       <StyledImg alt="virgil logo" src={virgilLogo} />
     </StyledContainer>
   </HeroContainer>
