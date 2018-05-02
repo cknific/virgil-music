@@ -1,7 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'reactstrap'
 import styled from 'styled-components'
-import Link from 'gatsby-link'
 import heroBackground from './images/album-art-green_wave.jpg'
 import virgilLogo from '../../components/Hero/images/virgil-logo.png'
 
@@ -32,7 +31,7 @@ const SectionHeading = styled.h2`
   margin-bottom: 0;
 `
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
   color: #fff;
   font-size: 1.2rem;
 
@@ -40,6 +39,11 @@ const StyledLink = styled(Link)`
     color: #fff;
   }
 `
+
+const comingSoon = (event) => {
+  event.preventDefault()
+  window.confirm('Pre-order coming soon!')
+}
 
 const PreOrder = () => (
   <SectionContainer id="pre-order">
@@ -50,8 +54,8 @@ const PreOrder = () => (
       <BandName>
         <StyledImg alt="virgil logo" src={virgilLogo} />
       </BandName>
-      <StyledLink to="#">
-        District Lines Store
+      <StyledLink href="#" onClick={comingSoon}>
+        District Lines Store (Coming Soon!)
       </StyledLink>
     </Container>
   </SectionContainer>
