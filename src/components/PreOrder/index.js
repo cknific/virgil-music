@@ -31,32 +31,15 @@ const SectionHeading = styled.h2`
   margin-bottom: 0;
 `
 
-const StyledLink = styled.a`
-  color: #fff;
-  font-size: 1.2rem;
-
-  &:hover {
-    color: #fff;
-  }
-`
-
-const comingSoon = (event) => {
-  event.preventDefault()
-  window.confirm('Pre-order coming soon!')
-}
-
 const PreOrder = () => (
   <SectionContainer id="pre-order">
     <Container>
-      <SectionHeading>
-        Pre-order "THE PACER" at the
-      </SectionHeading>
       <BandName>
         <StyledImg alt="virgil logo" src={virgilLogo} />
       </BandName>
-      <StyledLink href="#" onClick={comingSoon}>
-        District Lines Store (Coming Soon!)
-      </StyledLink>
+      <SectionHeading>
+        "THE PACER" will be available everywhere on June 15th, 2018.
+      </SectionHeading>
     </Container>
   </SectionContainer>
 )
