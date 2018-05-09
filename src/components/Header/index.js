@@ -53,7 +53,23 @@ class Header extends Component {
               <NavLink href="#listen">Listen</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="#pre-order">Pre-order</NavLink>
+              <NavLink href="#pre-order">Order</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                href="https://www.instagram.com/virgil_music/"
+                target="_blank"
+              >
+                Instagram
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                href="https://www.facebook.com/thisisvirgil/"
+                target="_blank"
+              >
+                Facebook
+              </NavLink>
             </NavItem>
           </Nav>
         </Collapse>
