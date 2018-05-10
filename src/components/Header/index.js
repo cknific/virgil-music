@@ -71,6 +71,14 @@ class Header extends Component {
                 Facebook
               </NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink
+                href="https://www.youtube.com/channel/UC9WxKj4wD34FNlzYwF6Dm4g"
+                target="_blank"
+              >
+                YouTube
+              </NavLink>
+            </NavItem>
           </Nav>
         </Collapse>
       </StyledNavbar>
