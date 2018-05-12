@@ -1,16 +1,12 @@
 import React from 'react'
 import { Container, Row, Col } from 'reactstrap'
+import { Parallax } from 'react-parallax';
 import styled from 'styled-components'
 import heroBackground from './images/album-art-green_wave.jpg'
 import virgilLogo from '../../components/Hero/images/virgil-logo.png'
 
 const SectionContainer = styled.div`
   background-color: #052f2d;
-  background-image: url("${heroBackground}");
-  background-position-y: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 8rem 0 9rem;
   text-align: center;
   color: #fff;
 `
@@ -31,16 +27,30 @@ const SectionHeading = styled.h2`
   margin-bottom: 0;
 `
 
+const StyledContainer = styled(Container)`
+  &&& {
+    padding: 8rem 0 9rem;
+    max-width: 90vw;
+  }
+`
+
 const PreOrder = () => (
   <SectionContainer id="pre-order">
-    <Container>
-      <BandName>
-        <StyledImg alt="virgil logo" src={virgilLogo} />
-      </BandName>
-      <SectionHeading>
-        "THE PACER" will be available everywhere on June 15th, 2018.
-      </SectionHeading>
-    </Container>
+    <Parallax
+      bgImage={heroBackground}
+      bgImageAlt="Album Art"
+      strength={300}
+      blur={-1}
+    >
+      <StyledContainer>
+        <BandName>
+          <StyledImg alt="virgil logo" src={virgilLogo} />
+        </BandName>
+        <SectionHeading>
+          "THE PACER" - Available everywhere June 15th, 2018.
+        </SectionHeading>
+      </StyledContainer>
+    </Parallax>
   </SectionContainer>
 )
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'reactstrap'
+import { Parallax } from 'react-parallax';
 import styled from 'styled-components'
 
 import heroBackground from './images/noise-and-hand-red.png'
@@ -13,7 +14,7 @@ const CenteredRow = styled(Row)`
 
 const CompositionCredit = styled.h4`
   font-weight: 300;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 `
 
 const PerformerName = styled.h3`
@@ -31,11 +32,6 @@ const PerformerRole = styled.h4`
 
 const SectionContainer = styled.div`
   background-color: #4e1110;
-  background-image: url("${heroBackground}");
-  background-position-y: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 5rem 0;
   text-align: center;
   color: #fff;
 `
@@ -59,40 +55,52 @@ const Subheading = styled.div`
   margin-bottom 2rem;
 `
 
+const StyledContainer = styled(Container)`
+  &&& {
+    padding: 5rem 0;
+  }
+`
+
 const About = () => (
   <SectionContainer id="pacer">
-    <Container>
-      <SectionHeading>
-        The Pacer
-      </SectionHeading>
-      <Subheading>EP Available June 15</Subheading>
-      <CompositionCredit>
-        Composition and Guitars by Chris Knific
-      </CompositionCredit>
-      <CenteredRow>
-        <StyledCol lg="4" md="6">
-          <PerformerRole>Drums</PerformerRole>
-          <PerformerName>Navene Koperweis</PerformerName>
-          <PerformerCredit>Animals As Leaders, Entheos</PerformerCredit>
-        </StyledCol>
-        <StyledCol lg="4" md="6">
-          <PerformerRole>Bass</PerformerRole>
-          <PerformerName>Brandon Giffin</PerformerName>
-          <PerformerCredit>The Faceless, Cynic</PerformerCredit>
-        </StyledCol>
-        <StyledCol lg="4" md="6">
-          <PerformerRole>Lead Guitar</PerformerRole>
-          <PerformerName>Justin McKinney</PerformerName>
-          <PerformerCredit>The Faceless, The Zenith Passage</PerformerCredit>
-        </StyledCol>
-      </CenteredRow>
-      <Row style={{ padding: '2rem 0 0' }}>
-        <Col>
-          <h4>Mixed by Simon Grove</h4>
-          <PerformerCredit>Plini, Intervals, Instrumental (Adj.)</PerformerCredit>
-        </Col>
-      </Row>
-    </Container>
+    <Parallax
+      bgImage={heroBackground}
+      bgImageAlt="Background Image"
+      strength={-200}
+    >
+      <StyledContainer>
+        <SectionHeading>
+          The Pacer
+        </SectionHeading>
+        <Subheading>EP Available June 15</Subheading>
+        <CompositionCredit>
+          Composition and Guitars by Chris Knific
+        </CompositionCredit>
+        <CenteredRow>
+          <StyledCol lg="4" md="6">
+            <PerformerRole>Drums</PerformerRole>
+            <PerformerName>Navene Koperweis</PerformerName>
+            <PerformerCredit>Animals As Leaders, Entheos</PerformerCredit>
+          </StyledCol>
+          <StyledCol lg="4" md="6">
+            <PerformerRole>Bass</PerformerRole>
+            <PerformerName>Brandon Giffin</PerformerName>
+            <PerformerCredit>The Faceless, Cynic</PerformerCredit>
+          </StyledCol>
+          <StyledCol lg="4" md="6">
+            <PerformerRole>Lead Guitar</PerformerRole>
+            <PerformerName>Justin McKinney</PerformerName>
+            <PerformerCredit>The Faceless, The Zenith Passage</PerformerCredit>
+          </StyledCol>
+        </CenteredRow>
+        <Row style={{ padding: '2rem 0 0' }}>
+          <Col>
+            <h4>Mixed by Simon Grove</h4>
+            <PerformerCredit>Plini, Intervals, Instrumental (Adj.)</PerformerCredit>
+          </Col>
+        </Row>
+      </StyledContainer>
+    </Parallax>
   </SectionContainer>
 )
 

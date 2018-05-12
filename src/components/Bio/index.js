@@ -25,8 +25,8 @@ const Bio = () => (
     <Parallax
       bgImage={heroBackground}
       bgImageAlt="Band Image"
-      strength={50}
-      blur={{min: 0,max:4}}
+      strength={-150}
+      blur={{min: -1,max:5}}
     >
       <StyledContainer>
         <h4>Bio</h4>
