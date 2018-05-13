@@ -42,7 +42,8 @@ const StyledNavbar = styled(Navbar).attrs({
 
 const StyledNavLink = styled(NavLink)`
   &&& {
-    padding: 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 `
 
