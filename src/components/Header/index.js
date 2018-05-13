@@ -19,7 +19,7 @@ const StyledNavbar = styled(Navbar).attrs({
 })
 `
   &&& {
-    background-color: #111111e8;
+    background-color: rgba(17, 17, 17, 0.91);
     font-family: "PT Sans Narrow", sans-serif;
     position: sticky;
   }
