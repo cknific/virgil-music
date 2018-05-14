@@ -14,16 +14,17 @@ import faYoutube from '@fortawesome/fontawesome-free-brands/faYoutube'
 import faInstagram from '@fortawesome/fontawesome-free-brands/faInstagram'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import styled from 'styled-components'
+import breakpoint from 'styled-components-breakpoint'
 
 const IconTitle = styled.span`
-  @media(min-width: 576px){
+  ${breakpoint('sm')`
     display: none;
-  }
+  `};
 
-  @media(max-width: 576px){
+  ${breakpoint('xs')`
     display: inline-block;
     margin-left: .5rem;
-  }
+  `};
 `
 
 const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
@@ -53,11 +54,6 @@ const StyledNavbar = styled(Navbar).attrs({
 const StyledNavLink = styled(NavLink)`
   &&& {
     display: flex;
-
-    @media(min-width: 576px){
-      padding-top: 0;
-      padding-bottom: 0;
-    }
   }
 `
 
