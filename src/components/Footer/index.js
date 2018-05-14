@@ -22,13 +22,24 @@ const StyledLink = styled.a`
 const Footer = () => (
   <div>
     <StyledContainer fluid>
-      Album Artwork by&nbsp;
+      <div>
+        Album Artwork by&nbsp;
         <StyledLink
           href="https://www.drknudson.com/"
           target="_blank"
         >
           Dr. Knudson
         </StyledLink>
+      </div>
+      <div>
+        Website Design and Development by&nbsp;
+        <StyledLink
+          href="https://www.mutations.ltd/"
+          target="_blank"
+        >
+          Mutations Limited
+        </StyledLink>
+      </div>
     </StyledContainer>
   </div>
 )

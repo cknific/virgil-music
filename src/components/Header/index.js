@@ -9,7 +9,32 @@ import {
   NavbarBrand,
   NavbarToggler,
 } from 'reactstrap'
+import faFacebook from '@fortawesome/fontawesome-free-brands/faFacebook'
+import faYoutube from '@fortawesome/fontawesome-free-brands/faYoutube'
+import faInstagram from '@fortawesome/fontawesome-free-brands/faInstagram'
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import styled from 'styled-components'
+
+const IconTitle = styled.span`
+  @media(min-width: 576px){
+    display: none;
+  }
+
+  @media(max-width: 576px){
+    display: inline-block;
+    margin-left: .5rem;
+  }
+`
+
+const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
+  font-size: 1.25rem;
+`
+
+const StyledNav = styled(Nav).attrs({
+  navbar: true,
+})`
+  margin-left: auto;
+`
 
 const StyledNavbar = styled(Navbar).attrs({
   dark: true,
@@ -22,6 +47,17 @@ const StyledNavbar = styled(Navbar).attrs({
     background-color: rgba(17, 17, 17, 0.91);
     font-family: "PT Sans Narrow", sans-serif;
     position: sticky;
+  }
+`
+
+const StyledNavLink = styled(NavLink)`
+  &&& {
+    display: flex;
+
+    @media(min-width: 576px){
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
 `
 
@@ -58,31 +94,39 @@ class Header extends Component {
             <NavItem>
               <NavLink href="#pre-order">Order</NavLink>
             </NavItem>
+          </Nav>
+          <StyledNav>
             <NavItem>
-              <NavLink
+              <StyledNavLink
                 href="https://www.instagram.com/virgil_music/"
                 target="_blank"
+                title="Virgil Instagram Account"
               >
-                Instagram
-              </NavLink>
+                <StyledFontAwesomeIcon icon={faInstagram} />
+                <IconTitle>Instagram</IconTitle>
+              </StyledNavLink>
             </NavItem>
             <NavItem>
-              <NavLink
+              <StyledNavLink
                 href="https://www.facebook.com/thisisvirgil/"
                 target="_blank"
+                title="Virgil Facebook Page"
               >
-                Facebook
-              </NavLink>
+                <StyledFontAwesomeIcon icon={faFacebook} />
+                <IconTitle>Facebook</IconTitle>
+              </StyledNavLink>
             </NavItem>
             <NavItem>
-              <NavLink
+              <StyledNavLink
                 href="https://www.youtube.com/channel/UC9WxKj4wD34FNlzYwF6Dm4g"
                 target="_blank"
+                title="Virgil YouTube Channel"
               >
-                YouTube
-              </NavLink>
+                <StyledFontAwesomeIcon icon={faYoutube} />
+                <IconTitle>YouTube</IconTitle>
+              </StyledNavLink>
             </NavItem>
-          </Nav>
+          </StyledNav>
         </Collapse>
       </StyledNavbar>
     )
