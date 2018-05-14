@@ -15,9 +15,19 @@ import faInstagram from '@fortawesome/fontawesome-free-brands/faInstagram'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import styled from 'styled-components'
 
+const IconTitle = styled.span`
+  @media(min-width: 576px){
+    display: none;
+  }
+
+  @media(max-width: 576px){
+    display: inline-block;
+    margin-left: .5rem;
+  }
+`
+
 const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
   font-size: 1.25rem;
-  margin-top: .25rem;
 `
 
 const StyledNav = styled(Nav).attrs({
@@ -42,8 +52,12 @@ const StyledNavbar = styled(Navbar).attrs({
 
 const StyledNavLink = styled(NavLink)`
   &&& {
-    padding-top: 0;
-    padding-bottom: 0;
+    display: flex;
+
+    @media(min-width: 576px){
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
 `
 
@@ -89,6 +103,7 @@ class Header extends Component {
                 title="Virgil Instagram Account"
               >
                 <StyledFontAwesomeIcon icon={faInstagram} />
+                <IconTitle>Instagram</IconTitle>
               </StyledNavLink>
             </NavItem>
             <NavItem>
@@ -98,6 +113,7 @@ class Header extends Component {
                 title="Virgil Facebook Page"
               >
                 <StyledFontAwesomeIcon icon={faFacebook} />
+                <IconTitle>Facebook</IconTitle>
               </StyledNavLink>
             </NavItem>
             <NavItem>
@@ -107,6 +123,7 @@ class Header extends Component {
                 title="Virgil YouTube Channel"
               >
                 <StyledFontAwesomeIcon icon={faYoutube} />
+                <IconTitle>YouTube</IconTitle>
               </StyledNavLink>
             </NavItem>
           </StyledNav>
