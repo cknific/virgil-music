@@ -89,7 +89,7 @@ const Hero = () => (
     </StyledContainer>
     <StyledDiv>
       <StyledLink to="/#listen">
-        <StyledFontAwesomeIcon icon={faPlayCircle} />Stream "Will it Blend?" Now
+        Stream "Will it Blend?" Now
       </StyledLink>
     </StyledDiv>
   </HeroContainer>
