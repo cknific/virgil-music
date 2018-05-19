@@ -63,12 +63,14 @@ const StyledContainer = styled('Container')`
 const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
   &&& {
     margin-right: .3rem;
+    font-size: 1rem;
   }
 `
 
 const StyledLink = styled(Link)`
   &&& {
     color: #fff;
+    font-size: 1rem;
   }
 `
 
