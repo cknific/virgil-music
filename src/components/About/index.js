@@ -8,13 +8,20 @@ import heroBackground from './images/noise-and-hand-red.png'
 const CenteredRow = styled(Row)`
   &&& {
     justify-content: center;
-    margin-top: 4rem;
+    margin-top: 3rem;
   }
 `
 
 const CompositionCredit = styled.h4`
-  font-weight: 300;
-  font-size: 1.2rem;
+  padding: 2rem 0;
+  letter-spacing: .05em;
+  font-size: 1.4rem;
+`
+
+const MixingRow = styled(Row)`
+  &&& {
+    padding-top: 2rem;
+  }
 `
 
 const PerformerName = styled.h3`
@@ -74,7 +81,7 @@ const About = () => (
         </SectionHeading>
         <Subheading>EP Available June 15</Subheading>
         <CompositionCredit>
-          Composition and Guitars by Chris Knific
+          Composition &amp; Guitars by Chris Knific
         </CompositionCredit>
         <CenteredRow>
           <StyledCol lg="4" md="6">
@@ -93,12 +100,12 @@ const About = () => (
             <PerformerCredit>The Faceless, The Zenith Passage</PerformerCredit>
           </StyledCol>
         </CenteredRow>
-        <Row style={{ padding: '2rem 0 0' }}>
+        <MixingRow>
           <Col>
             <h4>Mixed by Simon Grove</h4>
             <PerformerCredit>Plini, Intervals, Instrumental (Adj.)</PerformerCredit>
           </Col>
-        </Row>
+        </MixingRow>
       </StyledContainer>
     </Parallax>
   </SectionContainer>
