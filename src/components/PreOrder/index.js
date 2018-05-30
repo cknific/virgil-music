@@ -4,7 +4,6 @@ import { Parallax } from 'react-parallax';
 import styled from 'styled-components'
 import heroBackground from './images/album-art-green_wave.jpg'
 import virgilLogo from '../../components/Hero/images/virgil-logo.png'
-import appleMusicLogo from './images/apple-music.svg'
 import appleiTunesLogo from './images/apple-itunes.svg'
 
 const LogoImage = styled.img`
@@ -80,8 +79,7 @@ const PreOrder = () => (
           href="https://itunes.apple.com/tr/album/the-pacer-ep/1387202201?app=itunes"
           target="_blank"
         >
-          <StyledP>Pre-order now on Apple Music &amp; iTunes:</StyledP>
-          <LogoImage src={appleMusicLogo} />
+          <StyledP>Pre-order now on iTunes:</StyledP>
           <LogoImage src={appleiTunesLogo} />
         </StyledA>
         <Subheading>The Pacer EP - Available everywhere June 15th, 2018.</Subheading>
