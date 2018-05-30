@@ -77,7 +77,7 @@ const PreOrder = () => (
     >
       <StyledContainer>
         <StyledA
-          href="https://itunes.apple.com/tr/album/the-pacer-ep/1387202201"
+          href="https://itunes.apple.com/tr/album/the-pacer-ep/1387202201?app=itunes"
           target="_blank"
         >
           <StyledP>Pre-order now on Apple Music &amp; iTunes:</StyledP>
