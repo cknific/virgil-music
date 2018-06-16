@@ -5,6 +5,9 @@ import styled from 'styled-components'
 import heroBackground from './images/album-art-green_wave.jpg'
 import virgilLogo from '../../components/Hero/images/virgil-logo.png'
 import appleiTunesLogo from './images/apple-itunes.svg'
+import appleiMusicLogo from './images/apple-music.svg'
+import googlePlayLogo from './images/google.svg'
+import spotifyLogo from './images/spotify.svg'
 
 const LogoImage = styled.img`
   height: 3rem;
@@ -75,14 +78,32 @@ const PreOrder = () => (
       blur={-1}
     >
       <StyledContainer>
+        <StyledP>The Pacer EP - Available Now!</StyledP>
         <StyledA
           href="https://itunes.apple.com/tr/album/the-pacer-ep/1387202201?app=itunes"
           target="_blank"
         >
-          <StyledP>Pre-order now on iTunes:</StyledP>
           <LogoImage src={appleiTunesLogo} />
         </StyledA>
-        <Subheading>The Pacer EP - Available everywhere June 15th, 2018.</Subheading>
+        <StyledA
+          href="https://itunes.apple.com/us/album/the-pacer-ep/1387202201"
+          target="_blank"
+        >
+          <LogoImage src={appleiMusicLogo} />
+        </StyledA>
+        <StyledA
+          href="https://play.google.com/store/music/album/Virgil_The_Pacer?id=Bqvb2lthxa6ww67ys5dyse2fqhm&hl=en"
+          target="_blank"
+        >
+          <LogoImage src={googlePlayLogo} />
+        </StyledA>
+        <StyledA
+          href="https://open.spotify.com/album/45g7ZKjZy9ycW9MW9dg7ws?si=0hIf53v3QFSVK4hDFvbRuw"
+          target="_blank"
+        >
+          <LogoImage src={spotifyLogo} />
+        </StyledA>
+        <Subheading>And wherever else you consume music...</Subheading>
       </StyledContainer>
     </Parallax>
   </SectionContainer>
