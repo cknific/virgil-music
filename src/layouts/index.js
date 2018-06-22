@@ -21,6 +21,10 @@ const IndexLayout = ({ children, data }) => (
         meta={data.site.siteMetadata.metaTags}
         title={data.site.siteMetadata.title}
       >
+        <meta
+          content="5BXafKIstxCIbqHxHZMY3OEFs0s-qbcTTiJGfDvqzDM"
+          name="google-site-verification"
+        />
         <link rel="apple-touch-icon" sizes="180x180" href={appleTouch} />
         <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
         <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
