@@ -13,10 +13,6 @@ module.exports = [
       'Instrumental Progressive Metal',
   },
   {
-    name: 'google-site-verification',
-    content: '5BXafKIstxCIbqHxHZMY3OEFs0s-qbcTTiJGfDvqzDM',
-  },
-  {
     name: 'keywords',
     content: 'Virgil, Virgil Music, Prog, Progressive, Metal',
   },
